@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jolin's Portofolio</title>
+  </head>
+  <body>
+    <%- include("partials/header.ejs") %>
+
+    <div class="container mt-5">
+      <div class="row">
+        <div class="col-lg-6 mt-4">
+          <h1 class="about-h1 text-lg-start text-center">Hey, I'm Jolin Tiomar</h1>
+          <h5 class="about-h5 mt-3 text-lg-start text-center">Undergraduate Computer Science</h5>
+          <p class="about-p text-lg-start text-center"> 
+            I'm a 5th semester student majoring in computer science at Binus University. I have a strong interest in technology, with a keen eye
+            for detail and a passion for learning new things. I enjoy
+            collaborating in teams, tackling challenges, and bringing creative
+            ideas to life through code.
+          </p>
+          <div class="container text-lg-start text-center px-0 my-4">
+            <form action="/skill" method="GET">
+                <button type="submit" class="btn btn-light mb-2">More about me</button>
+              </form>
+          </div>
+        </div>
+        <div class="col-lg-6 text-center">
+          <img
+            class="mx-auto profile-img"
+            src="/images/profile.jpg"
+            height="300"
+            width="300"
+          />
+        </div>
+      </div>
+    </div>
+
+    
+    </div>
+ 
+    <%- include("partials/footer.ejs") %>
+    <script src="scripts/cursor.js"></script>
+  </body>
+</html>

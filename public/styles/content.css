@@ -1,0 +1,334 @@
+body {
+  background-color: #3b1e54;
+}
+
+.cursor {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: white;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  mix-blend-mode: difference;
+}
+
+ul li a {
+  text-decoration: none;
+  transition: 0.2s;
+}
+
+ul li:hover ~ .cursor {
+  transform: scale(3);
+}
+
+h1:hover ~ .cursor {
+  transform: scale(3);
+}
+
+/* supaya wave ttp di bawah */
+footer {
+  position: relative;
+  min-height: 150px;
+  overflow: hidden;
+}
+
+footer .wave {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background: url("../images/wave.png");
+  background-size: 1000px 100px;
+}
+
+footer .wave.wave1 {
+  animation: animate 30s linear infinite;
+  z-index: 1000;
+  opacity: 1;
+  animation-delay: 0s;
+  bottom: 0;
+}
+
+footer .wave.wave2 {
+  animation: animate2 15s linear infinite;
+  z-index: 999;
+  opacity: 0.5;
+  animation-delay: -5s;
+  bottom: 10px;
+}
+
+footer .wave.wave3 {
+  animation: animate 30s linear infinite;
+  z-index: 998;
+  opacity: 0.2;
+  animation-delay: -2s;
+  bottom: 15px;
+}
+
+footer .wave.wave4 {
+  animation: animate2 5s linear infinite;
+  z-index: 997;
+  opacity: 0.7;
+  animation-delay: 0s;
+  bottom: 20px;
+}
+
+@keyframes animate {
+  0% {
+    background-position-x: 0;
+  }
+  100% {
+    background-position-x: 1000px;
+  }
+}
+
+@keyframes animate2 {
+  0% {
+    background-position-x: 0;
+  }
+  100% {
+    background-position-x: 1000px;
+  }
+}
+
+.about-h1 {
+  color: #eeeeee;
+}
+
+.about-h5 {
+  color: #d4bee4;
+}
+
+.about-p {
+  color: #9b7ebd;
+}
+
+.profile-img {
+  cursor: pointer;
+  border-radius: 50%;
+  border-color: #9b7ebd;
+  border-width: 8px;
+  border-style: solid;
+  filter: grayscale(0%);
+  transition: all 800ms;
+}
+
+.profile-img:hover {
+  transform: rotate(360deg);
+  filter: drop-shadow(16px 16px 20px #eeeeee);
+}
+
+.active-link {
+  color: #fff;
+  background-color: #9b7ebd;
+}
+
+.skills-area {
+  display: flex;
+  flex-direction: column;
+  padding: 0 20%;
+}
+
+.skill {
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.skill-title {
+  font-size: 15px;
+}
+
+.skill-bar {
+  width: 100%;
+  background: #eeeeee;
+  height: 30px;
+  z-index: -1;
+  border-radius: 100px;
+  position: absolute;
+}
+
+.skill-fill {
+  background: #3572ef;
+  height: 30px;
+  border-radius: 100px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 30px;
+  overflow: hidden;
+}
+
+.skill-percent {
+  font-size: 15px;
+}
+
+.html {
+  animation: html 2s;
+  width: 95%;
+}
+
+.js {
+  animation: js 2s;
+  width: 90%;
+}
+
+.jquery {
+  animation: jquery 2s;
+  width: 90%;
+}
+
+.python {
+  animation: python 2s;
+  width: 90%;
+}
+
+.c {
+  animation: c 2s;
+  width: 90%;
+}
+
+.java {
+  animation: java 2s;
+  width: 90%;
+}
+
+@keyframes html {
+  from {
+    width: 0;
+  }
+  to {
+    width: 95%;
+  }
+}
+
+@keyframes js {
+  from {
+    width: 0;
+  }
+  to {
+    width: 90%;
+  }
+}
+
+@keyframes jquery {
+  from {
+    width: 0;
+  }
+  to {
+    width: 90%;
+  }
+}
+
+@keyframes python {
+  from {
+    width: 0;
+  }
+  to {
+    width: 90%;
+  }
+}
+
+@keyframes c {
+  from {
+    width: 0;
+  }
+  to {
+    width: 90%;
+  }
+}
+
+@keyframes java {
+  from {
+    width: 0;
+  }
+  to {
+    width: 90%;
+  }
+}
+
+.outer-box {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.box {
+  position: relative;
+  width: 220px;
+  height: 220px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  /* box-shadow: 0 30px 60px rgba(0,0,0,.2); */
+}
+
+.box .percent {
+  position: relative;
+  width: 150px;
+  height: 150px;
+}
+
+.box .percent svg {
+  position: relative;
+  width: 150px;
+  height: 150px;
+}
+
+.box .percent svg circle {
+  width: 150px;
+  height: 150px;
+  fill: none;
+  stroke-width: 10;
+  stroke: #000;
+  transform: translate(5px, 5px);
+  stroke-dasharray: 440;
+  stroke-dashoffset: 440;
+  stroke-linecap: round;
+}
+
+.box .percent svg circle:nth-child(1) {
+  stroke-dashoffset: 0;
+  stroke: #f3f3f3;
+}
+
+.box .percent svg circle:nth-child(2) {
+  stroke-dashoffset: calc(440 - (440 * 95) / 100);
+  stroke: #fabc3f;
+}
+
+.box .percent .number {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #999;
+}
+
+.box .percent .number h2 {
+  font-size: 45px;
+}
+
+.box .percent .number h2 span {
+  font-size: 20px;
+}
+
+.box .text {
+  padding: 10px 0 0;
+}
+
+.text-percent {
+  color: #dff2eb;
+}
+
+.text-education {
+  color: #d4bee4;
+}
